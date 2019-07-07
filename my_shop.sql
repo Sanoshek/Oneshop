@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 07 juil. 2019 à 14:23
+-- Généré le :  Dim 07 juil. 2019 à 15:35
 -- Version du serveur :  10.3.16-MariaDB
 -- Version de PHP :  7.3.6
 
@@ -33,6 +33,13 @@ CREATE TABLE `category` (
   `type` varchar(45) NOT NULL,
   `description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `category`
+--
+
+INSERT INTO `category` (`category_id`, `type`, `description`) VALUES
+(2, 'Vêtements', 'Ce sont des vêtements');
 
 -- --------------------------------------------------------
 
@@ -75,6 +82,16 @@ CREATE TABLE `product` (
   `photo` varchar(45) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `product`
+--
+
+INSERT INTO `product` (`id_product`, `name`, `price`, `description`, `photo`, `category_id`) VALUES
+(11, 'Pull', 25, 'The pull you need.', 'pull.png', 2),
+(12, 'MugCat', 12, 'A mug and a cat. Simple.', 'mugcat.jfif', 2),
+(13, 'Mug', 17, '3 mugs 3 colors a good pack !', 'mug.png', 2),
+(14, 'T-shirt', 7, 'A simple T-shirt.', 'téléchargement.jfif', 2);
 
 -- --------------------------------------------------------
 
@@ -156,7 +173,7 @@ ALTER TABLE `shipping`
 -- AUTO_INCREMENT pour la table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `clients`
@@ -174,7 +191,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `product_command`
