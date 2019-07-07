@@ -50,7 +50,6 @@ $donnees = getProductDesc($bdd);
             <li class="nav-item">
                 <a class="nav-link" href="aboutus.php">About us</a>
             </li>
-
             </ul>
         </div>
         </nav>
@@ -58,16 +57,16 @@ $donnees = getProductDesc($bdd);
     <body>
         <div class="container">
             <div class="row d-flex justify-content-center border">
-            <!-- <div class="col lg-2 border d-flex flex-column align-items-center"> -->
                        <?php
                        foreach ($donnees as $val) {       
                         echo '<div class="col lg-2 border d-flex flex-column align-items-center">
                                 <img src='.$val["photo"].' alt="Tigre" class="img-responsive center-block">
-                                  <p class="text-center"> 
-                                  '.$val["description"].'
+                                  <p class="text-center">
+                                  Nom : '.$val["name"].'</br> 
+                                  '.$val["description"].'</br>
+                                  prix : '.$val["price"].' €</br>
                                   </p>
                                   </div>';
-
                        }
                       
                   ?>
