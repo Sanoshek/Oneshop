@@ -1,6 +1,5 @@
 <?php
-
-namespace my_shop\Models;
+namespace Oneshop\Models;
 
 class ProductOrder {
     private $orderId;

@@ -1,12 +1,12 @@
 <?php
 
-namespace my_shop\Controllers;
+namespace Oneshop\Controllers;
 
 include '../DAO/ClientDAO.php';
 include '../Models/Client.php';
 
-use my_shop\DAO\ClientDAO;
-use my_shop\Models\Client;
+use Oneshop\DAO\ClientDAO;
+use Oneshop\Models\Client;
 
 class ClientsController {
 

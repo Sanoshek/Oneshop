@@ -1,10 +1,10 @@
 <?php
 
-namespace my_shop\DAO;
+namespace Oneshop\DAO;
 
-include 'Database.php';
+include_once 'Database.php';
 
-use my_shop\DAO\Database;
+use Oneshop\DAO\Database;
 
 class ProductOrderDAO {
     private $bdd;

@@ -1,6 +1,6 @@
 <?php
 
-namespace my_shop\Models;
+namespace Oneshop\Models;
 
 class Payment {
     private $orderId;

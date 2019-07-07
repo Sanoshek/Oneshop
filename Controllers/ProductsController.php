@@ -1,12 +1,12 @@
 <?php
 
-namespace my_shop\Controllers;
+namespace Oneshop\Controllers;
 
-include 'DAO\ProductDAO.php';
-include 'Models\Product.php';
+include_once 'DAO\ProductDAO.php';
+include_once 'Models\Product.php';
 
-use my_shop\DAO\ProductDAO;
-use my_shop\Models\Product;
+use Oneshop\DAO\ProductDAO;
+use Oneshop\Models\Product;
 
 class ProductsController {
 

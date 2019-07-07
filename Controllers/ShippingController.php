@@ -1,12 +1,12 @@
 <?php
 
-namespace my_shop\Controllers;
+namespace Oneshop\Controllers;
 
 include 'DAO\ShippingDAO.php';
 include 'Models\Shipping.php';
 
-use my_shop\DAO\ShippingDAO;
-use my_shop\Models\Shipping;
+use Oneshop\DAO\ShippingDAO;
+use Oneshop\Models\Shipping;
 
 class ShippingController {
 

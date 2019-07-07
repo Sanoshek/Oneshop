@@ -1,12 +1,12 @@
 <?php
 
-namespace my_shop\Controllers;
+namespace Oneshop\Controllers;
 
 include 'DAO\ProductOrderDAO.php';
 include 'Models\ProductOrder.php';
 
-use my_shop\DAO\ProductOrderDAO;
-use my_shop\Models\ProductOrder;
+use Oneshop\DAO\ProductOrderDAO;
+use Oneshop\Models\ProductOrder;
 
 class ProductOrderController {
 

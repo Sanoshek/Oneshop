@@ -1,10 +1,9 @@
 <?php
+namespace Oneshop\DAO;
 
-namespace my_shop\DAO;
+include_once 'Database.php';
 
-include 'Database.php';
-
-use my_shop\DAO\Database;
+use Oneshop\DAO\Database;
 
 class PaymentDAO {
     private $bdd;

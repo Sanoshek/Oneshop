@@ -1,6 +1,6 @@
 <?php
 
-namespace my_shop\DAO;
+namespace Oneshop\DAO;
 
 class Database {
     private const HOSTNAME = 'localhost';

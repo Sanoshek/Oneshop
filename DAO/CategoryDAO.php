@@ -1,10 +1,9 @@
 <?php
 
-namespace my_shop\DAO;
+namespace Oneshop\DAO;
 
-include 'Database.php';
-
-use my_shop\DAO\Database;
+include_once 'Database.php';
+use Oneshop\DAO\Database;
 
 class CategoryDAO {
     private $bdd;

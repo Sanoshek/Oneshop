@@ -1,12 +1,12 @@
 <?php
 
-namespace my_shop\Controllers;
+namespace Oneshop\Controllers;
 
 include 'DAO\CategoryDAO.php';
 include 'Models\Category.php';
 
-use my_shop\DAO\CategoryDAO;
-use my_shop\Models\Category;
+use Oneshop\DAO\CategoryDAO;
+use Oneshop\Models\Category;
 
 class CategoriesController {
 

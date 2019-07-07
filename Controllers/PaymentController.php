@@ -1,12 +1,12 @@
 <?php
 
-namespace my_shop\Controllers;
+namespace Oneshop\Controllers;
 
 include 'Models/Payment.php';
 include 'DAO/PaymentDAO.php';
 
-use my_shop\Models\Payment;
-use my_shop\DAO\PaymentDAO;
+use Oneshop\Models\Payment;
+use Oneshop\DAO\PaymentDAO;
 
 class PaymentController {
 
