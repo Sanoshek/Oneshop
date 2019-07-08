@@ -26,7 +26,7 @@
         <div class='container'>
             <div class='row'>
                 <div class='col-6'>
-                <h1>Connexion</h1>
+                <h1>Connection</h1>
                     <form action='../Controllers/LoginController.php' method='post'>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
@@ -41,24 +41,24 @@
                     </form>
                 </div>
                 <div class='col-6'>
-                    <h1>Créer un compte</h1>
+                    <h1>Register</h1>
                     <form action='../Controllers/ClientsController.php' method='post'>
                         <div class="form-group">
-                            <input class="form-control" placeholder='votre nom' name='name'>
+                            <input class="form-control" placeholder='Name't name='name'>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder='votre mail' name='email'>
+                            <input class="form-control" placeholder='Email' name='email'>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder='votre mot de passe' name='email'>
+                            <input class="form-control" placeholder='Password' name='email'>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder='votre adresse' name='adress'>
+                            <input class="form-control" placeholder='Adress' name='adress'>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder='votre numéro de téléphone' name='mobile'>
+                            <input class="form-control" placeholder='Mobile' name='mobile'>
                         </div>
-                        <button type='submit' class="btn btn-primary">Confirmer</button>
+                        <button type='submit' class="btn btn-primary">Submit</button>
                        
                     </form>
                 </div>
