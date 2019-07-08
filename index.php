@@ -1,8 +1,3 @@
-<?php
-
-?>
-
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -15,7 +10,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a href="index.php"><img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
+        <a href="index.php"><img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
@@ -42,10 +37,10 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="imgHome/img2.jpg">
+                        <img class="d-block w-100" src="imgHome/img3.jpg">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="imgHome/img1.jpg">
+                        <img class="d-block w-100" src="imgHome/img1.jfif">
                       </div>
                     </div>
               </div>
