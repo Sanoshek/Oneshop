@@ -11,18 +11,15 @@
     <header>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a href="home.php"><img src="../imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
+    <a href="/oneshop/"><img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link" href="goodies.php">Goodies</a>
+                <a class="nav-link" href="/oneshop/?action=goodies">Goodies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aboutus.php">About us</a>
+                <a class="nav-link" href="/oneshop/?action=about">About us</a>
             </li>
-            <!-- <li class="nav-item d-flex justify-content-end flex-grow-1">
-            <a class="nav-link" href = "Views/login.php"><button type="button" class="btn btn-dark">Connexion</button></a>
-            </li> -->
             </ul>
         </div>
         </nav>
@@ -32,7 +29,7 @@
             <div class='row'>
                 <div class='col-6'>
                 <h1>Connection</h1>
-                    <form action='../Controllers/LoginController.php' method='post'>
+                    <form action='Controllers/LoginController.php' method='post'>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -47,7 +44,7 @@
                 </div>
                 <div class='col-6'>
                     <h1>Register</h1>
-                    <form action='../Controllers/ClientsController.php' method='post'>
+                    <form action='Controllers/ClientsController.php' method='post'>
                         <div class="form-group">
                             <input class="form-control" placeholder='Name't name='name'>
                         </div>

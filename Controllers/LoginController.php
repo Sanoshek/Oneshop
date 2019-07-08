@@ -20,9 +20,9 @@ class LoginController {
         if($check) {
             $_SESSION['email'] = $email;
             $_SESSION['name'] = ClientDAO::getNameByEmail($email);
-            header('location:../index.php');
+            header('/oneshop/');
         } else
-            header('location:../Views/login.php');
+            header('/oneshop/?action=login');
     }
 }
 

@@ -2,7 +2,7 @@
 
 namespace Oneshop;
 
-include '../Utils/Utils.php';
+include 'Utils/Utils.php';
 
 use Oneshop\Utils\Utils;
 
@@ -19,22 +19,22 @@ $session = Utils::checkSession();
 </head>
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a href="home.php"> <img src="../imgHome/logo1.png" class="img-fluid" alt="Responsive image"> </a>
+        <a href="/oneshop/"> <img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"> </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link" href="goodies.php">Goodies</a>
+                <a class="nav-link" href="/oneshop/?action=goodies">Goodies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aboutus.php">About us</a>
+                <a class="nav-link" href="/oneshop/?action=about">About us</a>
             </li>
             <li class="nav-item d-flex justify-content-end flex-grow-1">
                 <?php
                 if ($session != false) {
-                    echo "<a class='nav-link' href = '../Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                    echo "<a class='nav-link' href = 'Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
                 }
                 else {
-                    echo "<a class='nav-link' href = '../Views/login.php'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                    echo "<a class='nav-link' href = '/oneshop/?action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
                 }
                 ?>
             </li>
