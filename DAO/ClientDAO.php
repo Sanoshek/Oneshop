@@ -2,10 +2,6 @@
 
 namespace Oneshop\DAO;
 
-// include_once 'Database.php';
-
-// use Oneshop\DAO\Database;
-
 class ClientDAO {
     private $bdd;
 
@@ -30,7 +26,7 @@ class ClientDAO {
         if(count($res) > 0){
             return true; 
         }
-        else{
+        else {
             return false;
         }
     }

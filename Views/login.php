@@ -39,7 +39,7 @@
                 </div>
                 <div class='col-6'>
                     <h1>Register</h1>
-                    <form action='Controllers/ClientsController.php' method='post'>
+                    <form action='/oneshop/?cn=login&action=signin' method='post'>
                         <div class="form-group">
                             <input class="form-control" placeholder='Name't name='name'>
                         </div>
@@ -47,7 +47,7 @@
                             <input class="form-control" placeholder='Email' name='email'>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder='Password' name='email'>
+                            <input class="form-control" placeholder='Password' name='password'>
                         </div>
                         <div class="form-group">
                             <input class="form-control" placeholder='Adress' name='adress'>
