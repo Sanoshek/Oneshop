@@ -60,7 +60,6 @@ $donnees = $productDAO->getProductDesc();
                             ".$val['name']."</br> 
                             <strong> ".$val['price']."€ </strong></br>
                             </p>
-                            <button type='bouton' class='btn btn-dark'>Ajouter</button>
                             </div>";
                        }
                   ?>
