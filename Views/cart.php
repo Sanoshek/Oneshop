@@ -14,7 +14,7 @@ $id_product = $_GET['id_product'];
 $array_new = array($id_product);
 
 function addProductToCart($id_product, $array_new) {
-    if (count($_SESSION['cart']) > 0) {
+    if (!empty($_SESSION) && count($_SESSION['cart']) > 0) {
         $array_merge =  array_merge($_SESSION['cart'], $array_new);
         $_SESSION['cart'] =  $array_merge;
     }
@@ -46,17 +46,17 @@ $data_id = getCart();
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link" href="/oneshop/?action=goodies">Goodies</a>
+                <a class="nav-link" href="/oneshop/?cn=goodies&action=show">Goodies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/oneshop/?action=about">About us</a>
+                <a class="nav-link" href="/oneshop/?cn=about&action=show">About us</a>
             <li class="nav-item d-flex justify-content-end flex-grow-1">
                 <?php
                 if ($session != false) {
-                    echo "<a class='nav-link' href = '/oneshop/?action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]."Logout</button></a>";
+                    echo "<a class='nav-link' href = '/oneshop/?cn=logout&action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]."Logout</button></a>";
                 }
                 else {
-                    echo "<a class='nav-link' href = '/oneshop/?action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                    echo "<a class='nav-link' href = '/oneshop/?cn=login&action=logging'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
                 }
                 ?>
             </li>

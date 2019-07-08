@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 08 juil. 2019 à 09:36
+-- Généré le :  lun. 08 juil. 2019 à 18:54
 -- Version du serveur :  10.3.16-MariaDB
 -- Version de PHP :  7.3.6
 
@@ -49,8 +49,9 @@ INSERT INTO `category` (`category_id`, `type`, `description`) VALUES
 
 CREATE TABLE `clients` (
   `id_clients` int(11) NOT NULL,
-  `email` varchar(255) NOT NULL,
   `name` varchar(45) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(250) NOT NULL,
   `adress` varchar(255) NOT NULL,
   `tel` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -59,8 +60,8 @@ CREATE TABLE `clients` (
 -- Déchargement des données de la table `clients`
 --
 
-INSERT INTO `clients` (`id_clients`, `email`, `name`, `adress`, `tel`) VALUES
-(7, 'qsd', 'qsdqs', 'qsdqsdqs', 'dqsd');
+INSERT INTO `clients` (`id_clients`, `name`, `email`, `password`, `adress`, `tel`) VALUES
+(8, 'Maxime', 'm.drelon1@groupeonepoint.com', 'Test', '14 rue des Glycines', '0767720433');
 
 -- --------------------------------------------------------
 
@@ -95,10 +96,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `name`, `price`, `description`, `photo`, `category_id`) VALUES
-(11, 'Pull', 25, 'The pull you need.', 'goodies/pull.png', 2),
-(12, 'MugCat', 12, 'A mug and a cat. Simple.', 'goodies/mugcat.jfif', 2),
-(13, 'Mug', 17, '3 mugs 3 colors a good pack !', 'goodies/mug.png', 2),
-(14, 'T-shirt', 7, 'A simple T-shirt.', 'goodies/téléchargement.jfif', 2);
+(11, 'Pull', 25, 'The pull you need.', 'goodies/hoodieone.png', 2),
+(12, 'T-shirt One', 12, 'A simple t-shirt.', 'goodies/tshirtone.png', 2),
+(13, 'Mug', 17, 'A nice onepoint mug.', 'goodies/mugone.png', 2),
+(14, 'Mugs', 7, 'A 3 mug pack.', 'goodies/mug.png', 2);
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id_clients` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_clients` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `payment`
