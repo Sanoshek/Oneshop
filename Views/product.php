@@ -2,11 +2,18 @@
 
 namespace Oneshop;
 
-include 'Utils/Utils.php';
+include '../Utils/Utils.php';
+include '../DAO/Database.php';
+include '../DAO/ProductDAO.php';
 
 use Oneshop\Utils\Utils;
+use Oneshop\DAO\ProductDAO;
+
 
 $session = Utils::checkSession();
+
+$productDAO = new ProductDAO();
+$test = $productDAO->getProductById($_GET["id_product"]);
 ?>
 
 <!doctype html>
@@ -21,7 +28,7 @@ $session = Utils::checkSession();
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a href="index.php"><img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
+        <a href="home.php"><img src="../imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
@@ -33,10 +40,10 @@ $session = Utils::checkSession();
             <li class="nav-item d-flex justify-content-end flex-grow-1">
             <?php
               if ($session != false) {
-                echo "<a class='nav-link' href = 'Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                echo "<a class='nav-link' href = '../Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
               }
               else {
-                echo "<a class='nav-link' href = 'Views/login.php'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                echo "<a class='nav-link' href = 'login.php'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
               }
             ?>
             </li>
@@ -48,12 +55,23 @@ $session = Utils::checkSession();
     </br>
         <div class="container d-flex">
                 <div class="col">
-                <img src='goodies/pull.png' width = "80%" alt="Tigre" class="img-responsive center-block border">
+                <?php
+                echo "<img src=../".$test['photo']." width = '80%' alt='Tigre' class='img-responsive center-block border'>"
+                ?>
+                
                 </div>
                 <div class="col border">
-                <h1 class="text-center">Pull</h1>
-                <p class="text-center">Je suis la descriptiondza dzadaz zefefegre gregr gr zgr ghyhythyt ukyrk hjtyjtyhrhrt zhgtr</p>
-                <p class="text-center font-weight-bold">150€</p>
+                <h1 class="text-center">
+                <?php 
+                echo $test["name"]; 
+                ?>
+                </h1>
+                <p class="text-center"><?php 
+                echo $test["description"]; 
+                ?></p>
+                <p class="text-center font-weight-bold"><?php 
+                echo $test["price"]; 
+                ?></p>
                 <div class="flex-grow-1 d-flex justify-content-center">
                 <button type='button'class='btn btn-dark'>Ajouter au panier </button>
                 <div>

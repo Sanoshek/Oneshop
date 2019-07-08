@@ -4,6 +4,7 @@ namespace Oneshop\DAO;
 
 include_once 'Database.php';
 
+use Oneshop\DAO\ProductDAO;
 use Oneshop\DAO\Database;
 
 class ProductOrderDAO {
@@ -25,4 +26,3 @@ class ProductOrderDAO {
     }
 }
 
-?>

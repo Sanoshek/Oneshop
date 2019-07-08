@@ -12,6 +12,7 @@ $session = Utils::checkSession();
 
 $productDAO = new ProductDAO();
 $donnees = $productDAO->getProductDesc();
+// $test = $productDAO->getProductById();
 ?>
 
 <!doctype html>
@@ -54,17 +55,15 @@ $donnees = $productDAO->getProductDesc();
             <div class="row d-flex justify-content-center border">
                        <?php
                        foreach ($donnees as $val) {       
-                        echo '<div class="col lg-2 border d-flex flex-column align-items-center">
-                                <img src=../'.$val["photo"].' alt="Tigre" class="img-responsive center-block">
-                                  <p class="text-center">
-                                  Nom : '.$val["name"].'</br> 
-                                  '.$val["description"].'</br>
-                                  prix : '.$val["price"].' €</br>
+                        echo "<div class='col lg-2 border d-flex flex-column align-items-center'>
+                                <a href='product.php?id_product=".$val['id_product']."'><img src=../".$val['photo']." alt='Tigre' class='img-responsive center-block'></a>
+                                  <p class='text-center'>
+                                  ".$val['name']."</br> 
+                                  <strong> ".$val['price']." € </strong></br>
                                   </p>
-                                  <button type="bouton" class="btn btn-dark">Ajouter</button>
-                                  </div>';
+                                  <button type='bouton' class='btn btn-dark'>Ajouter</button>
+                                  </div>";
                        }
-                      
                   ?>
             <!-- </div> -->
             <!-- <div class="col lg-2 border d-flex flex-column align-items-center">
