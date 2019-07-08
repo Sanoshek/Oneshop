@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 07 juil. 2019 à 15:35
+-- Généré le :  lun. 08 juil. 2019 à 09:36
 -- Version du serveur :  10.3.16-MariaDB
 -- Version de PHP :  7.3.6
 
@@ -55,6 +55,13 @@ CREATE TABLE `clients` (
   `tel` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `clients`
+--
+
+INSERT INTO `clients` (`id_clients`, `email`, `name`, `adress`, `tel`) VALUES
+(7, 'qsd', 'qsdqs', 'qsdqsdqs', 'dqsd');
+
 -- --------------------------------------------------------
 
 --
@@ -88,10 +95,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `name`, `price`, `description`, `photo`, `category_id`) VALUES
-(11, 'Pull', 25, 'The pull you need.', 'pull.png', 2),
-(12, 'MugCat', 12, 'A mug and a cat. Simple.', 'mugcat.jfif', 2),
-(13, 'Mug', 17, '3 mugs 3 colors a good pack !', 'mug.png', 2),
-(14, 'T-shirt', 7, 'A simple T-shirt.', 'téléchargement.jfif', 2);
+(11, 'Pull', 25, 'The pull you need.', 'goodies/pull.png', 2),
+(12, 'MugCat', 12, 'A mug and a cat. Simple.', 'goodies/mugcat.jfif', 2),
+(13, 'Mug', 17, '3 mugs 3 colors a good pack !', 'goodies/mug.png', 2),
+(14, 'T-shirt', 7, 'A simple T-shirt.', 'goodies/téléchargement.jfif', 2);
 
 -- --------------------------------------------------------
 
@@ -179,7 +186,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id_clients` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_clients` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `payment`

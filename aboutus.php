@@ -12,7 +12,7 @@
 </head>
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a href="index.php"><img src="imgHome/logo.png" class="img-fluid" alt="Responsive image"></a>
+        <a href="index.php"><img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item">
