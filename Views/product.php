@@ -54,7 +54,9 @@
                 echo $test["price"]; 
                 ?></p>
                 <div class="flex-grow-1 d-flex justify-content-center">
-                <button type='button'class='btn btn-dark'>Ajouter au panier </button>
+                <?php
+                echo "<a href = '/oneshop/Views/cart.php?id_product=".$_GET['id_product']."' <button type='button' class='btn btn-dark btn-md'>Ajouter au panier</button></a>"
+                ?>
                 <div>
                 </div>
               </div>

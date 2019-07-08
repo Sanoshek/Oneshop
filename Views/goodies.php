@@ -39,7 +39,7 @@
                        <?php
                        foreach ($donnees as $val) {       
                             echo "<div class='col lg-2 border d-flex flex-column align-items-center'>
-                            <a href='/oneshop/?cn=product&action=show&id_product=".$val['id_product']."'><img src=".$val['photo']." alt='Tigre' class='img-responsive center-block'></a>
+                            <a href='/oneshop/?cn=product&action=show&id_product=".$val['id_product']."'><img src=".$val['photo']." alt='Tigre' class='img-responsive center-block' height='225' width='225'></a>
                             <p class='text-center'>
                             ".$val['name']."</br> 
                             <strong> ".$val['price']."€ </strong></br>
