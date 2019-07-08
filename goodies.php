@@ -66,6 +66,7 @@ $donnees = getProductDesc($bdd);
                                   '.$val["description"].'</br>
                                   prix : '.$val["price"].' €</br>
                                   </p>
+                                  <button type="bouton" class="btn btn-dark">Ajouter</button>
                                   </div>';
                        }
                       
