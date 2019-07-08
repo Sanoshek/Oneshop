@@ -1,8 +1,3 @@
-<?php
-
-?>
-
-
 <html>
     <head>
         <title>Se connecter - Oneshop</title>
@@ -29,7 +24,7 @@
             <div class='row'>
                 <div class='col-6'>
                 <h1>Connection</h1>
-                    <form action='Controllers/LoginController.php' method='post'>
+                    <form action='/oneshop/?cn=login&action=logging' method='post'>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">

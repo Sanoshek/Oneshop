@@ -1,19 +1,3 @@
-<?php
-namespace Oneshop;
-
-include 'Utils/Utils.php';
-include 'DAO/Database.php';
-include 'DAO/ProductDAO.php';
-
-use Oneshop\Utils\Utils;
-use Oneshop\DAO\ProductDAO;
-
-$session = Utils::checkSession();
-
-$productDAO = new ProductDAO();
-$donnees = $productDAO->getProductDesc();
-?>
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -35,10 +19,10 @@ $donnees = $productDAO->getProductDesc();
             <li class="nav-item d-flex justify-content-end flex-grow-1">
                 <?php
                 if ($session != false) {
-                    echo "<a class='nav-link' href = '/oneshop/?action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                    echo "<a class='nav-link' href = '/oneshop/?cn=logout&action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
                 }
                 else {
-                    echo "<a class='nav-link' href = '/oneshop/?action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                    echo "<a class='nav-link' href = '/oneshop/?cn=login&action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
                 }
                 ?>
             </li>

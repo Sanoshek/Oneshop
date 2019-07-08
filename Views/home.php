@@ -1,14 +1,3 @@
-<?php
-
-namespace Oneshop\Views;
-
-include 'Utils/Utils.php';
-
-use Oneshop\Utils\Utils;
-
-$session = Utils::checkSession();
-?>
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -32,10 +21,10 @@ $session = Utils::checkSession();
             <li class="nav-item d-flex justify-content-end flex-grow-1">
             <?php
               if ($session != false) {
-                echo "<a class='nav-link' href = '/oneshop/?action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                echo "<a class='nav-link' href = '/oneshop/?cn=logout&action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
               }
               else {
-                echo "<a class='nav-link' href = '/oneshop/?action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                echo "<a class='nav-link' href = '/oneshop/?cn=login&action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
               }
             ?>
             </li>

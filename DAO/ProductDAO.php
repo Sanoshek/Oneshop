@@ -29,6 +29,7 @@ class ProductDAO {
         $donnees = $reponse->fetchAll(\PDO::FETCH_ASSOC);
         return $donnees;
     }
+
     public function getProductById($id) {
         $reponse = $this->bdd->query("select * from product p where p.id_product='".$id."'");
         $donnees = $reponse->fetch();

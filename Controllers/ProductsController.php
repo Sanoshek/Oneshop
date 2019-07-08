@@ -29,4 +29,16 @@ class ProductsController {
         $daoProduct = new ProductDAO();
         $daoProduct->addProduct($product);
     }
+
+    public static function getProductById($id, $session) {
+        $productDAO = new ProductDAO();
+        $test = $productDAO->getProductById($_GET["id_product"]);
+        return (include '../oneshop/Views/product.php');
+    }
+
+    public static function getProducts($session) {
+        $productDAO = new ProductDAO();
+        $donnees = $productDAO->getProductDesc();
+        return (include '../oneshop/Views/goodies.php');
+    }
 }

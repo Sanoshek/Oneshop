@@ -4,8 +4,8 @@ namespace Oneshop\Controllers;
 
 session_start();
 
-include '../DAO/LoginDAO.php';
-include '../DAO/ClientDAO.php';
+include 'DAO/LoginDAO.php';
+include 'DAO/ClientDAO.php';
 
 use Oneshop\DAO\LoginDAO;
 use Oneshop\DAO\ClientDAO;
@@ -14,7 +14,7 @@ class LoginController {
 
     public function __construct() {}
 
-    public function check($email, $password) {
+    public static function check($email, $password) {
         $daoLogin = new LoginDAO();
         $check = $daoLogin->check($email, $password);
         if($check) {
@@ -22,9 +22,6 @@ class LoginController {
             $_SESSION['name'] = ClientDAO::getNameByEmail($email);
             header('location:/oneshop/');
         } else
-            header('location:/oneshop/?action=login');
+            header('location:/oneshop/?cn=login&action=login');
     }
 }
-
-$lc = new LoginController();
-$lc->check($_POST['email'], $_POST['password']);

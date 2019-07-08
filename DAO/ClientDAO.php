@@ -2,9 +2,9 @@
 
 namespace Oneshop\DAO;
 
-include_once 'Database.php';
+// include_once 'Database.php';
 
-use Oneshop\DAO\Database;
+// use Oneshop\DAO\Database;
 
 class ClientDAO {
     private $bdd;
