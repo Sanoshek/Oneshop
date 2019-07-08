@@ -28,8 +28,17 @@ class ClientsController {
         $daoClient = new ClientDAO();
         $daoClient->addClient($client);
     }
+
+    public function check($email) {
+        $daoClient = new ClientDAO();
+        if($daoClient->is_already_exist($email)) {
+            return true;
+        }
+        return false;
+    }
 }
 
 $client = new ClientsController();
-$client->addClient($_POST);
-header('location:../Views/home.php');
+if ($client->check($_POST['email']) == false)
+    $client->addClient($_POST);
+header('location:../Views/login.php');

@@ -23,6 +23,17 @@ class ClientDAO {
             'tel' => $client->getMobile()
         ));
     }
+
+    public function is_already_exist($email) {
+        $req = $this->bdd->query("select * from clients where email='".$email."'");
+        $res = $req->fetchAll(\PDO::FETCH_ASSOC); 
+        if(count($res) > 0){
+            return true; 
+        }
+        else{
+            return false;
+        }
+    }
 }
 
 ?>

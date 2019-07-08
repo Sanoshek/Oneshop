@@ -31,7 +31,7 @@
                             <input class="form-control" placeholder='votre mail' name='email'>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder='votre mot de passe' name='email'>
+                            <input class="form-control" placeholder='votre mot de passe' name='password'>
                         </div>
                         <div class="form-group">
                             <input class="form-control" placeholder='votre adresse' name='adress'>
