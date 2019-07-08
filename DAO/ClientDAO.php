@@ -34,6 +34,12 @@ class ClientDAO {
             return false;
         }
     }
+
+    public static function getNameByEmail($email) {
+        $bdd = Database::getConnection();
+        $req = $bdd->query("select name from clients where email='".$email."'");
+        return $req->fetch();
+    }
 }
 
 ?>

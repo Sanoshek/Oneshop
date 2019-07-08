@@ -23,6 +23,12 @@ class ProductDAO {
             'category_id' => $product->getCategoryId()
         ));
     }
+
+    public function getProductDesc() {
+        $reponse = $this->bdd->query('select * from product');
+        $donnees = $reponse->fetchAll(\PDO::FETCH_ASSOC);
+        return $donnees;
+    }
 }
 
 ?>

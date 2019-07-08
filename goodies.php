@@ -1,34 +1,17 @@
 <?php
-//require_once("DAO/Database.php");
-require_once("Models/Product.php");
+namespace Oneshop;
 
-include_once 'Controllers/ProductsController.php';
+include 'Utils/Utils.php';
+include 'DAO/Database.php';
+include 'DAO/ProductDAO.php';
 
-use Oneshop\Controllers\ProductsController;
+use Oneshop\Utils\Utils;
+use Oneshop\DAO\ProductDAO;
 
-define('HOSTNAME', 'localhost');
-define('DBNAME', 'my_shop');
-define('CHARSET', 'utf8');
-define('USER_NAME', 'root');
+$session = Utils::checkSession();
 
-$bdd = null;
- 
-
-try {
-    $bdd = new PDO('mysql:host='.HOSTNAME.';dbname='.DBNAME.';charset='.CHARSET, USER_NAME, '');
-}
-catch(Exception $e) {
-    die('Erreur : '.$e->getMessage());
-}
-
-function getProductDesc($bdd)
-{
-    $reponse = $bdd->query('select * from product');
-    $donnees = $reponse->fetchAll(PDO::FETCH_ASSOC);
-    return $donnees;
-}
-
-$donnees = getProductDesc($bdd);
+$productDAO = new ProductDAO();
+$donnees = $productDAO->getProductDesc();
 ?>
 
 <!doctype html>
@@ -49,9 +32,15 @@ $donnees = getProductDesc($bdd);
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="aboutus.php">About us</a>
-            </li>
             <li class="nav-item d-flex justify-content-end flex-grow-1">
-            <a class="nav-link" href = "Views/login.php"><button type="button" class="btn btn-dark">Connexion</button></a>
+                <?php
+                if ($session != false) {
+                    echo "<a class='nav-link' href = 'Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                }
+                else {
+                    echo "<a class='nav-link' href = 'Views/login.php'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                }
+                ?>
             </li>
             </ul>
         </div>
