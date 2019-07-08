@@ -20,7 +20,6 @@ function addProductToCart($id_product, $array_new) {
 addProductToCart($id_product, $array_new);
 
 function getCart() {
-    var_dump($_SESSION['cart']);
     return ($_SESSION['cart']);
 }
 ?>
