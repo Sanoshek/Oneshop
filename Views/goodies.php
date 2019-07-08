@@ -28,10 +28,10 @@ $donnees = $productDAO->getProductDesc();
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link" href="/oneshop/?action=goodies">Goodies</a>
+                <a class="nav-link" href="/oneshop/?cn=goodies&action=show">Goodies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/oneshop/?action=about">About us</a>
+                <a class="nav-link" href="/oneshop/?cn=about&action=show">About us</a>
             <li class="nav-item d-flex justify-content-end flex-grow-1">
                 <?php
                 if ($session != false) {
@@ -55,7 +55,7 @@ $donnees = $productDAO->getProductDesc();
                        <?php
                        foreach ($donnees as $val) {       
                             echo "<div class='col lg-2 border d-flex flex-column align-items-center'>
-                            <a href='Views/product.php?id_product=".$val['id_product']."'><img src=".$val['photo']." alt='Tigre' class='img-responsive center-block'></a>
+                            <a href='/oneshop/?cn=product&action=show&id_product=".$val['id_product']."'><img src=".$val['photo']." alt='Tigre' class='img-responsive center-block'></a>
                             <p class='text-center'>
                             ".$val['name']."</br> 
                             <strong> ".$val['price']."€ </strong></br>

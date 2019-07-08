@@ -15,10 +15,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link" href="/oneshop/?action=goodies">Goodies</a>
+                <a class="nav-link" href="/oneshop/?cn=goodies&action=show">Goodies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/oneshop/?action=about">About us</a>
+                <a class="nav-link" href="/oneshop/?cn=about&action=show">About us</a>
             </li>
             </ul>
         </div>

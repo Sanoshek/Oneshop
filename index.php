@@ -10,9 +10,9 @@ $uri = $_SERVER['REQUEST_URI'];
 
 if ('/oneshop/' == $uri)
   MainController::indexAction();
-else if ('/oneshop/?action=goodies' == $uri)
+else if ('/oneshop/?cn=goodies&action=show' == $uri)
   MainController::goodiesAction();
-else if ('/oneshop/?action=about' == $uri)
+else if ('/oneshop/?cn=about&action=show' == $uri)
   MainController::aboutAction();
 else if ('/oneshop/?action=login' == $uri)
   MainController::connectAction();
