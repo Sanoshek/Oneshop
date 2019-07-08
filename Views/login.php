@@ -11,7 +11,7 @@
     <header>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a href="../index.php"><img src="../imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
+    <a href="home.php"><img src="../imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
