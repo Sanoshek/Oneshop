@@ -1,9 +1,9 @@
 <?php
 namespace Oneshop;
 
-include 'Utils/Utils.php';
-include 'DAO/Database.php';
-include 'DAO/ProductDAO.php';
+include '../Utils/Utils.php';
+include '../DAO/Database.php';
+include '../DAO/ProductDAO.php';
 
 use Oneshop\Utils\Utils;
 use Oneshop\DAO\ProductDAO;
@@ -24,7 +24,7 @@ $donnees = $productDAO->getProductDesc();
 </head>
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a href="index.php"> <img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"> </a>
+    <a href="home.php"> <img src="../imgHome/logo1.png" class="img-fluid" alt="Responsive image"> </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
@@ -35,10 +35,10 @@ $donnees = $productDAO->getProductDesc();
             <li class="nav-item d-flex justify-content-end flex-grow-1">
                 <?php
                 if ($session != false) {
-                    echo "<a class='nav-link' href = 'Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                    echo "<a class='nav-link' href = '../Utils/Logout.php'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
                 }
                 else {
-                    echo "<a class='nav-link' href = 'Views/login.php'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
+                    echo "<a class='nav-link' href = 'login.php'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
                 }
                 ?>
             </li>
@@ -55,7 +55,7 @@ $donnees = $productDAO->getProductDesc();
                        <?php
                        foreach ($donnees as $val) {       
                         echo '<div class="col lg-2 border d-flex flex-column align-items-center">
-                                <img src='.$val["photo"].' alt="Tigre" class="img-responsive center-block">
+                                <img src=../'.$val["photo"].' alt="Tigre" class="img-responsive center-block">
                                   <p class="text-center">
                                   Nom : '.$val["name"].'</br> 
                                   '.$val["description"].'</br>
