@@ -12,21 +12,23 @@
 </head>
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a href="index.php"><img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"></a>
+        <a href="index.php"> <img src="imgHome/logo1.png" class="img-fluid" alt="Responsive image"> </a>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
                 <a class="nav-link" href="goodies.php">Goodies</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="aboutus.php">About us<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.php">About us</a>
             </li>
-
+            <li class="nav-item d-flex justify-content-end flex-grow-1">
+            <a class="nav-link" href = "Views/login.php"><button type="button" class="btn btn-dark">Connexion</button></a>
+            </li>
             </ul>
         </div>
         </nav>
     </header>
-    <body>
+    <body class="bg-light">
 
     </body>
 </html>
