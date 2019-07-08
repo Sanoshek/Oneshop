@@ -25,7 +25,7 @@
                 <a class="nav-link" href="aboutus.php">About us</a>
             </li>
             <li class="nav-item d-flex justify-content-end flex-grow-1">
-            <a class="nav-link" href = "Views/client.php"><button type="button" class="btn btn-dark">Connexion</button></a>
+            <a class="nav-link" href = "Views/login.php"><button type="button" class="btn btn-dark">Connexion</button></a>
             </li>
             </ul>
         </div>
