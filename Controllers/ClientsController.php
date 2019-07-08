@@ -17,12 +17,14 @@ class ClientsController {
         $name = ($clientData['name']) ? $clientData['name'] : null;
         $adress = ($clientData['adress']) ? $clientData['adress'] : null;
         $mobile = ($clientData['mobile']) ? $clientData['mobile'] : null;
+        $password = ($clientData['password']) ? $clientData['password'] : null;
 
         $client = new Client();
         $client->setEmail($email);
         $client->setName($name);
         $client->setAdress($adress);
         $client->setMobile($mobile);
+        $client->setPassword($password);
         $daoClient = new ClientDAO();
         $daoClient->addClient($client);
     }

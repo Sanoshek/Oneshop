@@ -8,6 +8,7 @@ class Client {
     private $name;
     private $adress;
     private $mobile;
+    private $password;
 
     public function __construct() {
     }
@@ -18,7 +19,8 @@ class Client {
             'email' => $this->email,
             'name' => $this->name,
             'adress' => $this->adress,
-            'mobile' => $this->mobile
+            'mobile' => $this->mobile,
+            'password' => $this->password
         );
     }
 
@@ -42,6 +44,10 @@ class Client {
         return $this->mobile;
     }
 
+    public function getPassword() {
+        return $this->password;
+    }
+
     public function setName($name) {
         $this->name = $name;
     }
@@ -56,6 +62,10 @@ class Client {
 
     public function setMobile($mobile) {
         $this->mobile = $mobile;
+    }
+
+    public function setPassword($password) {
+        $this->password = $password;
     }
 }
 ?>
