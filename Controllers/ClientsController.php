@@ -42,7 +42,7 @@ class ClientsController {
         if ($client->check($data['email']) == false) {
             $client->addClient($data);
             header('location:/oneshop/');
-        }
-        header('location:/oneshop/?cn=login&action=login');
+        } else
+            header('location:/oneshop/?cn=login&action=login');
     }
 }

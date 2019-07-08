@@ -14,7 +14,7 @@ $id_product = $_GET['id_product'];
 $array_new = array($id_product);
 
 function addProductToCart($id_product, $array_new) {
-    if (!empty($_SESSION) && count($_SESSION['cart']) > 0) {
+    if (!empty($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
         $array_merge =  array_merge($_SESSION['cart'], $array_new);
         $_SESSION['cart'] =  $array_merge;
     }
