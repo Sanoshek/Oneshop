@@ -76,13 +76,23 @@ $data_id = getCart();
                 foreach (getCart() as $val) {
                 $data_product = $productDAO->getProductById($val);
                  echo "
-                <div class='row border'>
-                     <div class='col'>
-                        <p class='text-center'><img src ='../".$data_product['photo']."' alt='photo' height='225' width='225'></p>
+                 <div class='row d-flex justify-content-center align-items-center border'>
+                     <div class='col border-right'>
+                        <p class='text-center'><img src ='../".$data_product['photo']."' alt='photo' height='112' width='112'></p>
                     </div>
-                    <div class='col'>
-                    <p class='text-center'>".$data_product['price']."</p>
+                    <div class='col border-right f-grow-1'>
+                    <p class='text-center'>".$data_product['price']."€</p>
                     </div>
+                    <div class='col border-right'>
+                    <p class='text-center'>".$data_product['price']."€</p>
+                    </div>
+                    <div class='col border-right'>
+                    <p class='text-center'>".$data_product['price']."€</p>
+                    </div>
+                    <div class='col border-right d-flex justify-content-center'>
+                    <button type='button' class='btn btn-dark btn-md'>Supprimer</button>
+                    </div>
+                    
                 </div>";
                 } 
                 ?>
