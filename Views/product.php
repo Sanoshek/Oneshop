@@ -51,7 +51,8 @@
                 echo $test["description"]; 
                 ?></p>
                 <p class="text-center font-weight-bold"><?php 
-                echo $test["price"]; 
+                echo $test['price'];
+                echo " €" 
                 ?></p>
                 <div class="flex-grow-1 d-flex justify-content-center">
                 <?php
