@@ -17,8 +17,7 @@ function addProductToCart($id_product, $array_new) {
     if (!empty($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
         $array_merge =  array_merge($_SESSION['cart'], $array_new);
         $_SESSION['cart'] =  $array_merge;
-    }
-     else {
+    } else {
         $_SESSION['cart'] = $array_new;
     }
 }
@@ -30,6 +29,7 @@ function getCart() {
 
 $productDAO = new ProductDAO();
 $data_id = getCart();
+
 ?>
 
 <!doctype html>
