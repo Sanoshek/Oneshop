@@ -11,12 +11,19 @@ use Oneshop\DAO\ProductDAO;
 
 $id_product = $_GET['id_product'];
 
-$array_new = array($id_product);
+$array_new = array($id_product => 1);
 
 function addProductToCart($id_product, $array_new) {
+    $flag=0;
     if (!empty($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
-        $array_merge =  array_merge($_SESSION['cart'], $array_new);
-        $_SESSION['cart'] =  $array_merge;
+
+        foreach ($_SESSION['cart'] as $key => $val) {
+            if($key == $id_product){
+                $_SESSION['cart'][$key] += 1;
+                return;
+            }
+        }
+        $_SESSION['cart'][$id_product] = 1;
     } else {
         $_SESSION['cart'] = $array_new;
     }
@@ -72,9 +79,9 @@ $data_id = getCart();
         <h1 class="text-center"><?php echo "";  ?></h1>
         </br>
                 <?php 
-                
-                foreach (getCart() as $val) {
-                $data_product = $productDAO->getProductById($val);
+                $cart = getCart();
+                foreach (getCart() as $key => $val) {
+                $data_product = $productDAO->getProductById($key);
                  echo "
                  <div class='row d-flex justify-content-center align-items-center border'>
                      <div class='col border-right'>
@@ -84,7 +91,7 @@ $data_id = getCart();
                     <p class='text-center'>".$data_product['price']."€</p>
                     </div>
                     <div class='col border-right'>
-                    <p class='text-center'>".$data_product['price']."€</p>
+                    <p class='text-center'>".$val."</p>
                     </div>
                     <div class='col border-right'>
                     <p class='text-center'>".$data_product['price']."€</p>
