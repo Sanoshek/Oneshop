@@ -37,7 +37,7 @@
         <div class="container d-flex">
                 <div class="col">
                 <?php
-                echo "<img src=".$test['photo']." width = '80%' alt='Tigre' class='img-responsive center-block border border-dark rounded'>"
+                echo "<img src=".$test['photo']." width = '80%' alt='Tigre' class='img-responsive center-block border border-dark rounded' style='padding-top:15px; padding-bottom:15px'>"
                 ?>
                 
                 </div>
