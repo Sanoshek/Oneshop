@@ -36,8 +36,8 @@
             <h1 class="text-center">L'équipe</h1>
             </br>
             <div class="row">
-            <div class="col border">
-                <p class="text-center">Mehdi</p>
+            <div class="col border d-flex flex-column align-items-center">
+                <p class="">Mehdi</p>
             </div>
             <div class="col border">
                 <p class="text-center">Edouard</p>

@@ -57,6 +57,7 @@
                     </div>
     </div>
                 <?php 
+                if (!empty($_SESSION['cart'])) {
                 foreach ($_SESSION['cart'] as $key => $val) {
                 $data_product = $productDAO->getProductById($key);
                  echo "
@@ -79,10 +80,18 @@
                     
                 </div> </br>";
                 } 
+            }
+            else {
+                echo "</br></br> <h2 class='text-center'>Your cart is empty.</h2>";
+            }
                 ?>
                 </div>
                 <div class="row d-flex justify-content-center">
-                <button type='button' class='btn btn-dark btn-md'>Commander</button>
+                <?php
+                if (!empty($_SESSION['cart'])) {
+                echo "<button type='button' class='btn btn-dark btn-md'>Commander</button>";
+                }
+                ?>
                 </div>
             </div>
     </body>
