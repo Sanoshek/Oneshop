@@ -34,10 +34,12 @@
         </nav>
     </header>
     <body class="bg-light">
-        <div class="container">
+    <?php
+    if (!empty($_SESSION['cart'])) {
+        echo "<div class='container'>
         </br>
         </br>
-        <h1 class="text-center"><?php echo "Your cart";  ?></h1>
+        <h1 class='text-center'><?php echo 'Your cart';  ?></h1>
         </br>
         </br>
         <div class='row d-flex justify-content-center align-items-center'>
@@ -55,7 +57,9 @@
                     </div>
                     <div class='col'>
                     </div>
-    </div>
+    </div>";
+    }
+    ?>
                 <?php 
                 if (!empty($_SESSION['cart'])) {
                 foreach ($_SESSION['cart'] as $key => $val) {
@@ -82,7 +86,7 @@
                 } 
             }
             else {
-                echo "</br></br> <h2 class='text-center'>Your cart is empty.</h2>";
+                echo "</br></br></br></br></br></br></br></br> <h2 class='text-center'>Your cart is empty.</h2>";
             }
                 ?>
                 </div>
