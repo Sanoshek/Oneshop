@@ -2,6 +2,10 @@
 
 namespace Oneshop\Controllers;
 
+include_once 'DAO/ProductDAO.php';
+
+use Oneshop\DAO\ProductDAO;
+
 class MainController {
 
     public function __construct() {}
@@ -24,6 +28,11 @@ class MainController {
 
     public static function logoutAction($session) {
         return (include '../oneshop/Utils/logout.php');
+    }
+
+    public static function cartAction($session) {
+        $productDAO = new ProductDAO();
+        return (include '../oneshop/Views/cart.php');
     }
 }
 
