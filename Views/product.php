@@ -22,6 +22,7 @@
             <?php
               if ($session != false) {
                 echo "<a class='nav-link' href = '/oneshop/?cn=logout&action=logout'><button type='button' class='btn btn-dark btn-md'>".$session['name'][0]." : Logout</button></a>";
+                echo "<a class='nav-link' href = '/oneshop/?cn=cart&action=show'><button type='button' class='btn btn-dark btn-md'>Panier</button></a>";
               }
               else {
                 echo "<a class='nav-link' href = '/oneshop/?cn=login&action=login'><button type='button' class='btn btn-dark btn-md'>Connexion</button></a>";
