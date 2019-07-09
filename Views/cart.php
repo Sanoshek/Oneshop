@@ -81,6 +81,22 @@ $data_id = getCart();
         <h1 class="text-center"><?php echo "Your cart";  ?></h1>
         </br>
         </br>
+        <div class='row d-flex justify-content-center align-items-center'>
+                    <div class='col d-flex justify-content-center'>
+                     <p class='text-center'>Product</p>
+                    </div>
+                    <div class='col'>
+                    <p class='text-center'>Name</p>
+                    </div>
+                    <div class='col'>
+                    <p class='text-center'>Price</p>
+                    </div>
+                    <div class='col'>
+                    <p class='text-center'>Quantité</p>
+                    </div>
+                    <div class='col'>
+                    </div>
+    </div>
                 <?php 
                 $cart = getCart();
                 foreach (getCart() as $key => $val) {
@@ -106,6 +122,9 @@ $data_id = getCart();
                 </div> </br>";
                 } 
                 ?>
+                </div>
+                <div class="row d-flex justify-content-center">
+                <button type='button' class='btn btn-dark btn-md'>Commander</button>
                 </div>
             </div>
     </body>
