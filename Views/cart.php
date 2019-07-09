@@ -76,31 +76,34 @@ $data_id = getCart();
     </header>
     <body class="bg-light">
         <div class="container">
-        <h1 class="text-center"><?php echo "";  ?></h1>
+        </br>
+        </br>
+        <h1 class="text-center"><?php echo "Your cart";  ?></h1>
+        </br>
         </br>
                 <?php 
                 $cart = getCart();
                 foreach (getCart() as $key => $val) {
                 $data_product = $productDAO->getProductById($key);
                  echo "
-                 <div class='row d-flex justify-content-center align-items-center border'>
-                     <div class='col border-right'>
-                        <p class='text-center'><img src ='../".$data_product['photo']."' alt='photo' height='112' width='112'></p>
+                 <div class='row d-flex justify-content-center align-items-center border border-dark rounded'>
+                     <div class='col border-right border-dark d-flex justify-content-center'>
+                        <img src ='../".$data_product['photo']."' alt='photo' height='112' width='112' style='padding-top:5px;'>
                     </div>
-                    <div class='col border-right f-grow-1'>
-                    <p class='text-center'>".$data_product['price']."€</p>
+                    <div class='col border-right f-grow-1 border-dark'>
+                    <p class='text-center'>".$data_product['name']."</p>
                     </div>
-                    <div class='col border-right'>
+                    <div class='col border-right border-dark'>
+                    <p class='text-center'>".$data_product['price']." €</p>
+                    </div>
+                    <div class='col border-right border-dark'>
                     <p class='text-center'>".$val."</p>
                     </div>
-                    <div class='col border-right'>
-                    <p class='text-center'>".$data_product['price']."€</p>
-                    </div>
                     <div class='col border-right d-flex justify-content-center'>
-                    <button type='button' class='btn btn-dark btn-md'>Supprimer</button>
+                    <button type='button' class='btn btn-dark btn-md'>Delete</button>
                     </div>
                     
-                </div>";
+                </div> </br>";
                 } 
                 ?>
                 </div>
