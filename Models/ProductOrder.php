@@ -4,8 +4,8 @@ namespace Oneshop\Models;
 class ProductOrder {
     private $orderId;
     private $clientId;
-    private $productId;
-    private $amount;
+    private $productIdss;
+    private $amountss;
     private $date;
 
     public function __construct() {}
@@ -14,8 +14,8 @@ class ProductOrder {
         return array(
             'orderId' => $this->orderId,
             'clientId' => $this->clientId,
-            'productId' => $this->productId,
-            'amount' => $this->amount,
+            'productIds' => $this->productIds,
+            'amounts' => $this->amounts,
             'date' => $this->date
         );
     }
@@ -24,12 +24,12 @@ class ProductOrder {
         $this->clientId = $clientId;
     }
 
-    public function setProductId($productId) {
-        $this->productId = $productId;
+    public function setProductIds($productIds) {
+        $this->productIds = $productIds;
     }
 
-    public function setAmount($amount) {
-        $this->amount = $amount;
+    public function setAmounts($amounts) {
+        $this->amounts = $amounts;
     }
 
     public function setDate($date) {
@@ -40,12 +40,12 @@ class ProductOrder {
         return $this->clientId;
     }
 
-    public function getProductId() {
-        return $this->productId;
+    public function getProductIds() {
+        return $this->productIds;
     }
 
-    public function getAmount() {
-        return $this->amount;
+    public function getAmounts() {
+        return $this->amounts;
     }
 
     public function getDate() {

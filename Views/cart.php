@@ -93,7 +93,7 @@
                 <div class="row d-flex justify-content-center">
                 <?php
                 if (!empty($_SESSION['cart'])) {
-                echo "<button type='button' class='btn btn-dark btn-md'>Commander</button>";
+                echo " <a href='/oneshop/?cn=order&action=order'><button type='button' class='btn btn-dark btn-md'>Order</button></a>";
                 }
                 ?>
                 </div>

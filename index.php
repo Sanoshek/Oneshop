@@ -9,6 +9,8 @@ include_once 'Controllers/LoginController.php';
 include_once 'DAO/Database.php';
 include_once 'Controllers/ClientsController.php';
 include_once 'DAO/ProductDAO.php';
+include_once 'Controllers/ProductOrderController.php';
+include_once 'Controllers/PaymentController.php';
 
 use Oneshop\DAO\ProductDAO;
 use oneshop\Controllers\MainController;
@@ -17,6 +19,8 @@ use Oneshop\Controllers\LoginController;
 use Oneshop\Utils\Utils;
 use Oneshop\DAO\Database;
 use Oneshop\Controllers\ClientsController;
+use Oneshop\Controllers\ProductOrderController;
+use Oneshop\Controllers\PaymentController;
 
 $uri = $_SERVER['REQUEST_URI'];
 $session = Utils::checkSession();
@@ -43,5 +47,9 @@ else if (strstr($uri, 'id_product=', true) == '/oneshop/?cn=cart&action=add&')
   Utils::addToCart($_GET['id_product'], array($_GET['id_product'] => 1));
 else if (strstr($uri, 'id_product', true) == '/oneshop/?cn=cart&action=delete&')
   Utils::removeFromCart($_GET['id_product']);
+else if ('/oneshop/?cn=order&action=order' == $uri)
+  ProductOrderController::addProductOrder($_SESSION['cart']);
+else if ('/oneshop/cn=checkout&action=show' == $uri)
+  PaymentController::checkoutAction();
 
 ?>

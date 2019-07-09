@@ -26,6 +26,10 @@ class PaymentController {
         $daoPayment = new PaymentDAO();
         $daoPayment->addPayment($payment);
     }
+
+    public static function checkoutAction() {
+        return ('../oneshop/Views/checkout.php');
+    }
 }
 
 ?>

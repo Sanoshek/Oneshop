@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 08 juil. 2019 à 18:54
+-- Généré le :  mar. 09 juil. 2019 à 17:35
 -- Version du serveur :  10.3.16-MariaDB
 -- Version de PHP :  7.3.6
 
@@ -61,7 +61,9 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id_clients`, `name`, `email`, `password`, `adress`, `tel`) VALUES
-(8, 'Maxime', 'm.drelon1@groupeonepoint.com', 'Test', '14 rue des Glycines', '0767720433');
+(8, 'Maxime', 'm.drelon1@groupeonepoint.com', 'Test', '14 rue des Glycines', '0767720433'),
+(14, 'Thomas', 't.raveneau@groupeonepoint.com', '123', '59 route des fusillés de la résistance', '0655658547'),
+(15, 'Odilon', 'o.hema@groupeonepoint.com', '123', '58 rue des fleurs', '0987767');
 
 -- --------------------------------------------------------
 
@@ -110,10 +112,20 @@ INSERT INTO `product` (`id_product`, `name`, `price`, `description`, `photo`, `c
 CREATE TABLE `product_command` (
   `id_command` int(11) NOT NULL,
   `clients_id_clients` int(11) NOT NULL,
-  `produit_id_product` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `date` date NOT NULL
+  `produit_id_product` varchar(255) NOT NULL,
+  `quantity` varchar(255) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `product_command`
+--
+
+INSERT INTO `product_command` (`id_command`, `clients_id_clients`, `produit_id_product`, `quantity`, `date`) VALUES
+(4, 14, '11;12', '15;16', '2019-07-09'),
+(19, 14, '11;12', '1;1', '2019-07-09'),
+(20, 14, '11;12', '1;1', '2019-07-09'),
+(21, 14, '12', '1', '2019-07-09');
 
 -- --------------------------------------------------------
 
@@ -187,7 +199,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id_clients` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_clients` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `payment`
@@ -205,7 +217,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT pour la table `product_command`
 --
 ALTER TABLE `product_command`
-  MODIFY `id_command` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_command` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT pour la table `shipping`
@@ -233,8 +245,7 @@ ALTER TABLE `product`
 -- Contraintes pour la table `product_command`
 --
 ALTER TABLE `product_command`
-  ADD CONSTRAINT `fk_clients_has_produit_clients` FOREIGN KEY (`clients_id_clients`) REFERENCES `clients` (`id_clients`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_clients_has_produit_produit1` FOREIGN KEY (`produit_id_product`) REFERENCES `product` (`id_product`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_clients_has_produit_clients` FOREIGN KEY (`clients_id_clients`) REFERENCES `clients` (`id_clients`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `shipping`
