@@ -32,6 +32,26 @@
         </nav>
     </header>
     <body class="bg-light">
-
+       <div class="container-fluid"> 
+            <h1 class="text-center">L'équipe</h1>
+            </br>
+            <div class="row">
+            <div class="col border">
+                <p class="text-center">Mehdi</p>
+            </div>
+            <div class="col border">
+                <p class="text-center">Edouard</p>
+            </div>
+            <div class="col border">
+                <p class="text-center">Odilon</p>
+            </div>
+            <div class="col border">
+                <p class="text-center">Thomas</p>
+            </div>
+            <div class="col border">
+                <p class="text-center">Maxime</p>
+            </div>
+            </div>
+        </div>
     </body>
 </html>

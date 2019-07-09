@@ -40,9 +40,25 @@
         <h1 class="text-center"><?php echo "Your cart";  ?></h1>
         </br>
         </br>
-                <?php
+        <div class='row d-flex justify-content-center align-items-center'>
+                    <div class='col d-flex justify-content-center'>
+                     <p class='text-center'>Product</p>
+                    </div>
+                    <div class='col'>
+                    <p class='text-center'>Name</p>
+                    </div>
+                    <div class='col'>
+                    <p class='text-center'>Price</p>
+                    </div>
+                    <div class='col'>
+                    <p class='text-center'>Quantité</p>
+                    </div>
+                    <div class='col'>
+                    </div>
+    </div>
+                <?php 
                 foreach ($_SESSION['cart'] as $key => $val) {
-                    $data_product = $productDAO->getProductById($key);
+                $data_product = $productDAO->getProductById($key);
                  echo "
                  <div class='row d-flex justify-content-center align-items-center border border-dark rounded'>
                      <div class='col border-right border-dark d-flex justify-content-center'>
@@ -64,6 +80,9 @@
                 </div> </br>";
                 } 
                 ?>
+                </div>
+                <div class="row d-flex justify-content-center">
+                <button type='button' class='btn btn-dark btn-md'>Commander</button>
                 </div>
             </div>
     </body>
