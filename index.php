@@ -39,8 +39,9 @@ else if (strstr($uri, 'id_product=', true) == '/oneshop/?cn=product&action=show&
   ProductsController::getProductById($_GET['id_product'], $session);
 else if ('/oneshop/?cn=cart&action=show' == $uri && $session != false)
   MainController::cartAction($session);
-else if (strstr($uri, 'id_product=', true) == '/oneshop/?cn=cart&action=add&') {
-  $id_product = $_GET['id_product'];
-  Utils::addToCart($id_product, array($id_product => 1));
-}
+else if (strstr($uri, 'id_product=', true) == '/oneshop/?cn=cart&action=add&')
+  Utils::addToCart($_GET['id_product'], array($_GET['id_product'] => 1));
+else if (strstr($uri, 'id_product', true) == '/oneshop/?cn=cart&action=delete&')
+  Utils::removeFromCart($_GET['id_product']);
+
 ?>

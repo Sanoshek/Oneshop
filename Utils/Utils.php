@@ -27,7 +27,11 @@ class Utils {
        header('location:/oneshop/?cn=cart&action=show');
     }
 
-    public static function getCart() {
-        return ($_SESSION['cart']);
+    public static function removeFromCart($id_product) {
+        $_SESSION['cart'][$id_product] -= 1;
+        if ($_SESSION['cart'][$id_product] == 0) {
+            unset($_SESSION['cart'][$id_product]);
+        }
+        header('location:/oneshop/?cn=cart&action=show');
     }
 }

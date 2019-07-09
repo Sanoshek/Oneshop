@@ -46,9 +46,7 @@
                             ".$val['name']."</br> 
                             <strong> ".$val['price']."€ </strong></br>
                             </p>
-                            </div>
-                            
-                            ";
+                            </div>";
                        }
                   ?>
             </div>

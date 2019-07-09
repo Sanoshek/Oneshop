@@ -15,6 +15,9 @@
                 <a class="nav-link" href="/oneshop/?cn=goodies&action=show">Goodies</a>
             </li>
             <li class="nav-item">
+            <a class='nav-link' href = '/oneshop/?cn=logout&action=logout'><button type='button' class='btn btn-dark btn-md'>Cart</button></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/oneshop/?cn=about&action=show">About us</a>
             <li class="nav-item d-flex justify-content-end flex-grow-1">
                 <?php
@@ -74,7 +77,7 @@
                     <p class='text-center'>".$val."</p>
                     </div>
                     <div class='col border-right d-flex justify-content-center'>
-                    <button type='button' class='btn btn-dark btn-md'>Delete</button>
+                    <a href='/oneshop/?cn=cart&action=delete&id_product=".$key."'><button type='button' class='btn btn-dark btn-md'>Delete</button></a>
                     </div>
                     
                 </div> </br>";
