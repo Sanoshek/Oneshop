@@ -8,7 +8,9 @@ include_once 'Utils/Utils.php';
 include_once 'Controllers/LoginController.php';
 include_once 'DAO/Database.php';
 include_once 'Controllers/ClientsController.php';
+include_once 'DAO/ProductDAO.php';
 
+use Oneshop\DAO\ProductDAO;
 use oneshop\Controllers\MainController;
 use oneshop\Controllers\ProductsController;
 use Oneshop\Controllers\LoginController;
@@ -35,5 +37,10 @@ else if ('/oneshop/?cn=logout&action=logout' == $uri)
   MainController::logoutAction($session);
 else if (strstr($uri, 'id_product=', true) == '/oneshop/?cn=product&action=show&')
   ProductsController::getProductById($_GET['id_product'], $session);
-
+else if ('/oneshop/?cn=cart&action=show' == $uri && $session != false)
+  MainController::cartAction($session);
+else if (strstr($uri, 'id_product=', true) == '/oneshop/?cn=cart&action=add&') {
+  $id_product = $_GET['id_product'];
+  Utils::addToCart($id_product, array($id_product => 1));
+}
 ?>

@@ -56,7 +56,11 @@
                 ?></p>
                 <div class=" d-flex justify-content-center">
                 <?php
-                echo "<a href = '/oneshop/Views/cart.php?id_product=".$_GET['id_product']."' <button type='button' class='btn btn-dark btn-md'>Ajouter au panier</button></a>"
+                if ($session != false) {
+                  echo "<a href = '/oneshop/?cn=cart&action=add&id_product=".$_GET['id_product']."'><button type='button' class='btn btn-dark btn-md'>Add to cart</button></a>";
+                } else {
+                  echo "<p>You must be logged to add to cart</p>";
+                }
                 ?>
                 <div>
                 </div>
