@@ -34,17 +34,21 @@
         </nav>
     </header>
     <body class="bg-light">
+    </br>
+    </br>
         <div class="container">
-            <div class="row d-flex justify-content-center border">
+            <div class="row d-flex justify-content-center">
                        <?php
                        foreach ($donnees as $val) {       
-                            echo "<div class='col lg-2 border d-flex flex-column align-items-center'>
+                            echo "<div class='col lg-2 border border-dark rounded d-flex flex-column align-items-center margin-left' style='margin-left:25px; margin-bottom:25px;'>
                             <a href='/oneshop/?cn=product&action=show&id_product=".$val['id_product']."'><img src=".$val['photo']." alt='Tigre' class='img-responsive center-block' height='225' width='225'></a>
                             <p class='text-center'>
                             ".$val['name']."</br> 
                             <strong> ".$val['price']."€ </strong></br>
                             </p>
-                            </div>";
+                            </div>
+                            
+                            ";
                        }
                   ?>
             </div>

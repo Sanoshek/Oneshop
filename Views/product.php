@@ -37,12 +37,12 @@
         <div class="container d-flex">
                 <div class="col">
                 <?php
-                echo "<img src=".$test['photo']." width = '80%' alt='Tigre' class='img-responsive center-block border'>"
+                echo "<img src=".$test['photo']." width = '80%' alt='Tigre' class='img-responsive center-block border border-dark rounded'>"
                 ?>
                 
                 </div>
-                <div class="col border">
-                <h1 class="text-center">
+                <div class="col border border-dark rounded d-flex justify-content-center flex-column">
+                <h1 class="text-center ">
                 <?php 
                 echo $test["name"]; 
                 ?>
@@ -54,7 +54,7 @@
                 echo $test['price'];
                 echo " €" 
                 ?></p>
-                <div class="flex-grow-1 d-flex justify-content-center">
+                <div class=" d-flex justify-content-center">
                 <?php
                 echo "<a href = '/oneshop/Views/cart.php?id_product=".$_GET['id_product']."' <button type='button' class='btn btn-dark btn-md'>Ajouter au panier</button></a>"
                 ?>
